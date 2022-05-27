@@ -1,0 +1,24 @@
+.alertDialog{
+    position: fixed;
+    padding: 1rem;
+    background-color: whitesmoke;
+    max-width: 40rem;
+    flex-direction: column;
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    left: 50%;  
+    top: 10%;
+    transform: translate(-50%, -50%);
+}
+.title{
+    color: red;
+}
+.message{
+    display: flex;
+    justify-content: left;
+}
+.footer{
+    display: flex;
+    justify-content: right;
+}
