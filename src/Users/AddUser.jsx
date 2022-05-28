@@ -4,6 +4,7 @@ import classes from '../Users/AddUser.module.css'
 import Button from '../UI/Button'
 import { useState } from 'react'
 import AlertDialog from '../UI/AlertDialog'
+import Wrapper from '../Helper/Wrapper'
 
 const AddUser = (props) => {
   const [enteredName, setEnteredName] = useState('')
@@ -48,7 +49,7 @@ const AddUser = (props) => {
       setError(null)
     }
   return (
-    <div>
+    <Wrapper>
       {error && <AlertDialog title={error.title} onConfirm={errorHandler} message={error.message} button="OKAY"/>}
       <Card className={classes.input}>
         <form onSubmit={onSubmitHandler}>
@@ -61,7 +62,7 @@ const AddUser = (props) => {
             <Button type='submit' onClick={onSubmitHandler}>Submit</Button>
         </form>
     </Card>
-    </div>
+    </Wrapper>
   )
 }
 
